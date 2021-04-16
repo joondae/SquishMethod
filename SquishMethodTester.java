@@ -5,7 +5,7 @@ import java.io.IOException;
 public class SquishMethodTester {
 	public static void main(String [] args) {
 		//Testing assignment sample inputs
-		//NOTE: if you get java.lang.ClassNotFoundException when running tester, use Project -> Clean... then run again 
+		//NOTE: if you get java.lang.ClassNotFoundException when running tester, go to menubar, use Project -> Clean... then run again 
 		System.out.println("Running sample inputs...");
 		try {
 			BufferedWriter bw = new BufferedWriter(new FileWriter("SquishA.txt"));
