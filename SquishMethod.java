@@ -49,7 +49,7 @@ public class SquishMethod {
 		//Output determined by piecewise function
 		if(input < 0.5) {
 			if(input < 0.4) {
-				//For 0 ≤ input ≤ 0.4, y = -0.9375(x - 0.4)^2 + 0.15
+				//For 0 < input < 0.4, y = -0.9375(x - 0.4)^2 + 0.15
 				output = -0.9375 * Math.pow(input - 0.4, 2) + 0.15;
 			}
 			else if(input == 0.4) {
@@ -58,7 +58,7 @@ public class SquishMethod {
 				output = 0.15;
 			}
 			else if(input > 0.4) {
-				//For 0.4 ≤ input ≤ 0.5, y = -10(x - 0.5)^2 + 0.25
+				//For 0.4 < input < 0.5, y = -10(x - 0.5)^2 + 0.25
 				output = -10 * Math.pow(input - 0.5, 2) + 0.25;
 			}
 		}
@@ -67,7 +67,7 @@ public class SquishMethod {
 			output = 0.25;
 		}
 		else if(input > 0.5){
-			//For 1 ≥ x ≥ 0.5, y = -x^2 + x
+			//For 1 > x > 0.5, y = -x^2 + x
 			output = (-1 * Math.pow(input, 2)) + (input);
 		}
 		

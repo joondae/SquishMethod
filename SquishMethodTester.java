@@ -20,7 +20,7 @@ public class SquishMethodTester {
 				bw.write("\ninput: " + squishInputs[i] + "  |  output: " + output);
 			}
 			bw.close();
-			System.out.println("\tDone running squish function");
+			System.out.println("\tDone running squish function (A)");
 			
 			BufferedWriter bw2 = new BufferedWriter(new FileWriter("CloseToBoundaryA.txt"));
 			double[] boundaryInputs = new double[] {0, 0.000027535691114583473, 0.004070137715896128, 0.18242552380635635, 0.2689414213699951, 0.425557483188341, 0.47178002201963243, 0.5, 0.5768852611320463, 0.6813537337890256, 0.7858349830425586, 0.8797431375322491, 0.9993891206405656, 1, 1};
@@ -33,7 +33,7 @@ public class SquishMethodTester {
 				bw2.write("\ninput: " + boundaryInputs[i] + "  |  output: " + output);
 			}
 			bw2.close();
-			System.out.println("\tDone running close to boundary function");
+			System.out.println("\tDone running close to boundary function (A)");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
