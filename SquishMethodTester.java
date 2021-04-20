@@ -6,7 +6,8 @@ import java.io.IOException;
 public class SquishMethodTester {
 	public static void main(String [] args) {
 		//Testing assignment sample inputs
-		//NOTE: if you get java.lang.ClassNotFoundException when running tester, go to menubar, use Project -> Clean... then run again 
+		//NOTE: if you get java.lang.ClassNotFoundException when running tester, go to menubar, use Project -> Clean... then run again
+		//NOTE: outputs may not be exact because of floating point errors
 		System.out.println("Running sample inputs...");
 		try {
 			BufferedWriter bw = new BufferedWriter(new FileWriter("SquishA.txt"));
@@ -31,6 +32,8 @@ public class SquishMethodTester {
 				double output = SquishMethod.closeToBoundaryA(boundaryInputs[i]);
 				boundaryOutputs[i] = output;
 				bw2.write("\ninput: " + boundaryInputs[i] + "  |  output: " + output);
+				if(boundaryInputs[i] == 0)
+					bw2.write(" <-- output isn't exactly 0.0 because of a floating point error");
 			}
 			bw2.close();
 			System.out.println("\tDone running close to boundary function (A)");
@@ -76,11 +79,11 @@ public class SquishMethodTester {
 		}
 		
 		
-		//Testing some integers from -100 to 100 exclusive
+		//Testing some integers from -100 to 100 inclusive
 		System.out.println("\n\n_______\n");
 		System.out.println("TEST #2");
 		System.out.println("_______");
-		System.out.println("inputs: some integers from -100 to 100 exclusive");
+		System.out.println("inputs: some integers from -100 to 100 inclusive");
 		int sizeOfSet = 401;
 		double[] outputs2 = new double[sizeOfSet];
 		double count = -100;
